@@ -14,6 +14,7 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { PintarVermelhoDirective } from './directives/pintar-vermelho.directive';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PintarVermelhoDirective } from './directives/pintar-vermelho.directive'
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
-    PintarVermelhoDirective
+    PintarVermelhoDirective,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
