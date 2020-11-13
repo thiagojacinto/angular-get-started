@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nome": "Só os melhores - Coletânea",
+      "descricao": "Here we go again",
+      "precoUnitario": 125.65,
+      "unidade": "caixa",
+      "categoria": 1,
+      "marcaId": 3,
+      "fornecedorId": 1,
+      "faqs": [1]
+    }
+  ],
+  "faqs": [
+    {
+    "id": 1,
+    "datahora": "2020-08-24T00:00:00Z",
+    "texto": "Isso é uma pergunta?",
+    "produtoId": 1
+    }
+  ]
+}
