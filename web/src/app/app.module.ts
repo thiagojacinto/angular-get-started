@@ -21,6 +21,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { PintarVermelhoDirective } from './directives/pintar-vermelho.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     HomeComponent,
     ProductCrudComponent,
     PintarVermelhoDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent
   ],
   imports: [
     BrowserModule,
