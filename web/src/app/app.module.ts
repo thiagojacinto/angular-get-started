@@ -22,6 +22,10 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { PintarVermelhoDirective } from './directives/pintar-vermelho.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { MatTemplateTableComponent } from './components/template/mat-template-table/mat-template-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ import { ProductReadComponent } from './components/product/product-read/product-
     ProductCrudComponent,
     PintarVermelhoDirective,
     ProductCreateComponent,
-    ProductReadComponent
+    ProductReadComponent,
+    MatTemplateTableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,10 @@ import { ProductReadComponent } from './components/product/product-read/product-
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
