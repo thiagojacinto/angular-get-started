@@ -1,0 +1,13 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-title {
+  margin-bottom: 1.8rem;
+  font-style: italic;
+}
+
+button {
+  margin: 1.2rem 1.5rem 0 0;
+}
