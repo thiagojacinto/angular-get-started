@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { Product } from '../../product/product.model';
+import { ProductService } from '../../product/product.service';
 
 // TODO: Replace this with your own data model type
 // export interface MatTemplateTableItem {
@@ -65,7 +66,7 @@ const EXAMPLE_DATA: Product[] = [
 // export class MatTemplateTableDataSource extends DataSource<MatTemplateTableItem> {
 //   data: MatTemplateTableItem[] = EXAMPLE_DATA;
 export class MatTemplateTableDataSource extends DataSource<Product> {
-  data: Product[] = EXAMPLE_DATA;
+  data: Product[];
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -84,12 +85,16 @@ export class MatTemplateTableDataSource extends DataSource<Product> {
     const dataMutations = [
       observableOf(this.data),
       this.paginator.page,
-      this.sort.sortChange
+      this.sort.sortChange,
     ];
 
-    return merge(...dataMutations).pipe(map(() => {
-      return this.getPagedData(this.getSortedData([...this.data]));
-    }));
+    
+
+    return merge(...dataMutations).pipe(
+      map(() => {
+        return this.getPagedData(this.getSortedData([...this.data]));
+      })
+    );
   }
 
   /**
@@ -112,16 +117,19 @@ export class MatTemplateTableDataSource extends DataSource<Product> {
    * this would be replaced by requesting the appropriate data from the server.
    */
   private getSortedData(data: Product[]) {
-    if (!this.sort.active || this.sort.direction === '') {
+    if (!this.sort.active || this.sort.direction === "") {
       return data;
     }
 
     return data.sort((a, b) => {
-      const isAsc = this.sort.direction === 'asc';
+      const isAsc = this.sort.direction === "asc";
       switch (this.sort.active) {
-        case 'name': return compare(a.nome, b.nome, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
-        default: return 0;
+        case "name":
+          return compare(a.nome, b.nome, isAsc);
+        case "id":
+          return compare(+a.id, +b.id, isAsc);
+        default:
+          return 0;
       }
     });
   }

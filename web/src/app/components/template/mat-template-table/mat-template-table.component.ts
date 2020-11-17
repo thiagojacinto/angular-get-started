@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { Product } from '../../product/product.model';
+import { ProductService } from '../../product/product.service';
 import { MatTemplateTableDataSource } from './mat-template-table-datasource';
 
 @Component({
@@ -20,8 +21,15 @@ export class MatTemplateTableComponent implements AfterViewInit, OnInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name', 'price'];
 
+  constructor(private productService: ProductService) {}
+
   ngOnInit() {
     this.dataSource = new MatTemplateTableDataSource();
+    
+    this.productService.getList().subscribe((list) => {
+      this.dataSource.data = list;
+      console.table(list);
+    }); 
   }
 
   ngAfterViewInit() {
