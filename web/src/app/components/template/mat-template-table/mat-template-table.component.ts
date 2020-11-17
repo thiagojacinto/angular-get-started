@@ -19,7 +19,7 @@ export class MatTemplateTableComponent implements AfterViewInit, OnInit {
   dataSource: MatTemplateTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'price'];
+  displayedColumns = ['id', 'name', 'price', 'action'];
 
   constructor(private productService: ProductService) {}
 
