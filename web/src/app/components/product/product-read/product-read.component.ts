@@ -14,10 +14,10 @@ export class ProductReadComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.getList().subscribe(list => {
-      this.products = list;
-      console.table(list);
-    });
+    // this.productService.getList().subscribe(list => {
+    //   this.products = list;
+    //   console.table(list);
+    // });
   }
 
 }
