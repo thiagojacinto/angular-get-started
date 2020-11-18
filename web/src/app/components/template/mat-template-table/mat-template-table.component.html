@@ -21,8 +21,8 @@
      <!-- Price Column -->
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
-      <td mat-cell *matCellDef="let row">
-        <a routerLink="" class="edit">
+      <td mat-cell *matCellDef="let product">
+        <a routerLink="edit/{{ product.id }}" class="edit">
           <i class="material-icons">
             edit
           </i>
