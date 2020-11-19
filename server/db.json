@@ -1,23 +1,78 @@
 {
   "products": [
     {
-      "id": 1,
-      "nome": "Só os melhores - Coletânea",
-      "descricao": "Here we go again",
-      "precoUnitario": 125.65,
-      "unidade": "caixa",
-      "categoria": 1,
-      "marcaId": 3,
+      "nome": "Testing master",
+      "descricao": "Usado para testes",
+      "precoUnitario": 101.59,
+      "marcaId": 1,
       "fornecedorId": 1,
-      "faqs": [1]
+      "faqs": [
+        1
+      ],
+      "id": 2
+    },
+    {
+      "nome": "Novo produto",
+      "descricao": "Será que vai funcionar? Veremos",
+      "precoUnitario": "1009.45",
+      "marcaId": 1,
+      "fornecedorId": 1,
+      "faqs": [
+        1
+      ],
+      "id": 3
+    },
+    {
+      "nome": "Testing master",
+      "descricao": "Usado para testes",
+      "precoUnitario": 101.59,
+      "marcaId": 1,
+      "fornecedorId": 1,
+      "faqs": [
+        1
+      ],
+      "id": 4
+    },
+    {
+      "nome": "Produto Editado e configurado",
+      "descricao": "Usado? Novo, novíssimo",
+      "precoUnitario": "195.43",
+      "marcaId": 1,
+      "fornecedorId": 1,
+      "faqs": [
+        1
+      ],
+      "id": 5
+    },
+    {
+      "nome": "Videomaker",
+      "descricao": "Usado para testes 20",
+      "precoUnitario": "1550.30",
+      "marcaId": 1,
+      "fornecedorId": 1,
+      "faqs": [
+        1
+      ],
+      "id": 6
+    },
+    {
+      "nome": "Samsung A71",
+      "descricao": "Android 10",
+      "precoUnitario": "1289.39",
+      "marcaId": 1,
+      "fornecedorId": 1,
+      "faqs": [
+        1
+      ],
+      "id": 7
     }
   ],
   "faqs": [
     {
-    "id": 1,
-    "datahora": "2020-08-24T00:00:00Z",
-    "texto": "Isso é uma pergunta?",
-    "produtoId": 1
+      "id": 1,
+      "datahora": "2020-08-24T00:00:00Z",
+      "texto": "Isso é uma pergunta?",
+      "produtoId": 1
     }
   ]
 }
