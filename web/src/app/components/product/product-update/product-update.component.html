@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Edit: {{ editedProduct.nome }}</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Name" name="name" [(ngModel)]="editedProduct.nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" name="description" [(ngModel)]="editedProduct.descricao">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Price (R$)" name="price" [(ngModel)]="editedProduct.precoUnitario">
+    </mat-form-field>
+  </form>
+  
+  <button (click)="update()" mat-raised-button color="accent">
+    Update
+  </button>
+  <button (click)="navigateToProducts()" mat-raised-button>
+    Cancel
+  </button>
+</mat-card>
